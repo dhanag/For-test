@@ -1,0 +1,772 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'NeoTech-Medium';
+	src: url('../images/fonts/NeoTech-Medium.ttf') format('truetype');
+	src: url('../images/fonts/NeoTech-Medium.eot'), url('../images/fonts/NeoTech-Medium.woff') format('woff'), url('../images/fonts/NeoTech-Medium.ttf') format('truetype'), url('../images/fonts/NeoTech-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Reset Styles */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
+	margin:0;
+	padding:0
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block
+}
+body {
+	line-height:1;
+	font-family: 'NeoTech-Medium', Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	-webkit-font-smoothing:antialiased;
+	-webkit-text-size-adjust:100%
+}
+
+ol, ul {
+	list-style:none
+}
+blockquote, q {
+	quotes:none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content:none
+}
+img {
+	max-width:100%;
+	height:auto;	
+}
+#preloadedImages {
+width: 0px;
+height: 0px;
+display: inline;
+background-image: url(../images/hom-bg.png);
+background-image: url(../images/icon-add.png);
+background-image: url(../images/icon-balance-enquiry.png);
+background-image: url(../images/icon-bg.png);
+background-image: url(../images/icon-data.png);
+background-image: url(../images/icon-international.png);
+background-image: url(../images/icon-local.png);
+background-image: url(../images/icon-manage-addons.png);
+background-image: url(../images/icon-onoff.png);
+background-image: url(../images/icon-prefered.png);
+background-image: url(../images/icon-remove.png);
+background-image: url(../images/icon-roaming.png);
+background-image: url(../images/icon-sms.png);
+background-image: url(../images/thanks-bg.png);
+}
+
+/* Layout Styles */
+html, body{ min-height:100%;}
+body { background:url(../images/bg-layout.png) repeat-x left top #c2c2c2;}
+#wrapper {
+	width:850px;
+	margin:0 auto
+}
+header, section {
+	display:block;
+	overflow:hidden
+}
+section {
+	width:80%;
+	margin:20px auto
+}
+section.homSec {width:100%;}
+h1, h2, h3, h4, h5, h6 {
+	color:#719E19;
+	font-family:NeoTech-Medium, Verdana, Arial, Helvetica, sans-serif;
+	font-weight:400
+}
+h1 {
+	font-size:260%;
+	line-height:1.5em;
+}
+h2 {
+	font-size:185%;
+	line-height:1.4em;
+	margin-bottom:10px
+}
+h3 {
+	font-size:115%;
+	line-height:1.5em;
+	margin-bottom:10px
+}
+h4 {
+	font-size:115%;
+	line-height:1.3em;
+	margin-bottom:10px
+}
+h5 {
+	font-size:110%;
+	line-height:1.3em;
+	margin-bottom:10px
+}
+h6 {
+	font-size:105%;
+	line-height:1em;
+	margin-bottom:10px
+}
+p {
+	color:#719E19;
+	font:400 12px Verdana, Geneva, sans-serif;
+	line-height:19px;
+	padding-bottom:15px
+}
+.bigTxt {
+	font-size:1.5em
+}
+.prenoTab {
+	margin-left:20%;
+	width:310px;
+}
+p.last {
+	padding-bottom:0
+}
+.bdr, .btn, .steps, .addon, .icons li, .icons li figure {
+	/*behavior: url(PIE.htc);*/
+	-moz-border-radius:15px;
+	-moz-border-radius-bottomleft:0;
+	-webkit-border-radius:15px;
+	-webkit-border-bottom-left-radius:0;
+	border-radius:15px 15px 15px 0;
+}
+.curTR, .notif, .popupClose {
+	-moz-border-radius-topright:10px;
+	-webkit-border-top-right-radius:10px;
+	border-top-right-radius:10px
+}
+.bdr, .addon {
+	border:1px solid #719E19
+}
+.nbdr {
+	border:none!important
+}
+.pad5 {
+	padding:5px
+}
+.pad10 {
+	padding:10px
+}
+.pad15 {
+	padding:15px
+}
+.pad20 {
+	padding:20px
+}
+.fRight {
+	float:right
+}
+.aC {
+	text-align:center
+}
+.aL {
+	text-align:left
+}
+.aR {
+	text-align:right
+}
+.aT {
+	vertical-align:top
+}
+.btn {
+	background-color:#719E19;
+	color:#FFF;
+	float:left;
+	font-size:1.3em;
+	font-weight:400;
+	letter-spacing:.05em;
+	line-height:20px;
+	margin-left:10px;
+	text-decoration:none;
+	padding:8px 15px 10px
+}
+.steps {
+	line-height:15px
+}
+.steps span {
+	color:#fff;
+	display:inline-block;
+	font-weight:700;
+	margin-right:10px;
+	text-align:center;
+	width:20px;
+	line-height:15px;
+	height:20px;
+	background:url(../images/steps-bg.png) no-repeat center top;
+	padding:3px
+}
+.popupBg {
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:#000;
+	z-index:50;	
+	display:none;
+}
+header {
+	padding-top:25px;
+	position:relative;
+	width:80%;
+	margin:0 auto;
+}
+
+header #logo {
+	margin-right:25px;
+	width:45%;
+}
+header h1 {
+	margin-top:13px
+}
+.homeScr {
+	background:url(../images/thanks-bg.png) no-repeat center top;
+	background-size:100% auto;
+	width:30%;
+	margin:0 auto;
+	padding:17% 5% 22% 9%
+}
+.row {
+	float:left;
+	margin-top:20px;
+	width:100%
+}
+.btnback {
+	position:absolute;
+	right:0;
+	top:25px
+}
+.btnback a {
+	line-height:15px;
+	padding:5px 7px
+}
+label {
+	color:#719E19;
+	font-size:1.05em;
+	position:relative
+}
+label .txt {
+	float:left;
+	font-size:1.3em;
+	line-height:30px;
+	margin-right:10px
+}
+label .inputText {
+	border:1px solid #719E19;
+	color:#719E19;
+	float:left;
+	font-family:NeoTech-Medium, Verdana, Arial, Helvetica, sans-serif;
+	height:18px;
+	padding:7px 10px
+}
+.errorMgs {
+	font-size:.9em;
+	color:#DF3847;
+	float:left;
+	width:100%;
+	text-align:left;
+	margin-top:5px;
+	display:none;
+}
+.tstyle1 tr td label .txt {
+	font-size:1em;
+	text-align:left;
+	width:100px
+}
+.maxwith {
+	width:155px
+}
+.addonDetails {
+	position:relative;
+	z-index:120
+}
+.addon {
+	background-color:#FFF;
+	display:none;
+	position:absolute;
+	width:99%;
+	margin-top:35px;
+	margin-left:4px;
+}
+.addontit {
+	border-bottom:1px solid #BED308;
+	display:block;
+	overflow:hidden;
+	padding:5px 15px 5px;
+}
+.addontit h5 {
+	float:left;
+	line-height:43px
+}
+.addontit figure {
+	float:left;
+	width:9%
+}
+.addontit figure img {
+	max-width:70%
+}
+.popupClose {
+	background:url(../images/icons.png) no-repeat center 5px #719E19;
+	cursor:pointer;
+	height:30px;
+	position:absolute;
+	right:-1px;
+	top:-1px;
+	width:30px;
+	z-index:300
+}
+.tstyle tr th, .tstyle1 tr th {
+	color:#719E19;
+	font-weight:400;
+	line-height:15px;
+	padding:10px
+}
+.tstyle tr td, .tstyle1 tr td {
+	vertical-align:top;
+	padding:15px 10px 20px
+}
+.tstyle tr td input, .tstyle1 tr td input {
+	background-color:#719E19;
+	border:none;
+	color:#fff;
+	font-size:1.2em;
+	font-weight:700;
+	text-align:right;
+	vertical-align:bottom;
+	width:30px;
+	padding:6px 7px
+}
+.tstyle tr td input.phonoinput, .tstyle1 tr td input.phonoinput {
+	width:120px
+}
+.tstyle tr td a, .tstyle1 tr td a {
+	margin:0 3px
+}
+.tstyle tr td, .tstyle tr th {
+	border-left:1px solid #BED308
+}
+.tstyle tr td:first-child, .tstyle tr th:first-child {
+	border:none
+}
+.iconstatus {
+	background:url(../images/icon-onoff.png) no-repeat left top;
+	height:34px;
+	width:82px;
+	display:inline-block;
+	vertical-align:bottom;
+	cursor:pointer
+}
+.iconstatus input {
+	display:none
+}
+.statusOn {
+	background-position:top
+}
+.statusOff {
+	background-position:bottom
+}
+.sumtable {
+	padding:0 15px 15px
+}
+.sumtable tr th.tlabel {
+	border-bottom:1px dotted #719E19;
+	color:#719E19;
+	font-weight:400;
+	padding:10px 12px
+}
+.sumtable tr td.tcont {
+	background-color:#acc52c;
+	border:1px solid #93b429;
+	color:#FFF;
+	padding:10px 12px
+}
+article {
+	border-top:1px dashed #719E19;
+	margin-top:10px
+}
+article.first {
+	border:0;
+	margin-top:0
+}
+.iconlinks {
+	vertical-align:bottom;
+	margin:0 5px
+}
+.reAmd {
+	color:#719E19;
+	font-size:1.5em
+}
+.splTxt {
+	border-top:1px solid #BED308;
+	font-size:.9em;
+	text-align:left;
+	padding:10px
+}
+.splTxt p {
+	line-height:22px;
+	padding-bottom:0
+}
+.yournum {
+	font-size:120%;
+	width:263px;
+	display:block!important
+}
+.introTxt {
+	border-bottom:1px solid #719E19;
+	padding:15px 15px 0
+}
+#showaddons li figure {
+	cursor:pointer
+}
+.iconHold {
+	width:98%;
+	margin:2% auto
+}
+.icons li {
+	behavior: url(PIE.htc);
+	display:inline-block;
+	text-align:center;
+	line-height:13px;
+	position:relative;
+	margin:3%;
+	padding:8px;
+	background:#fff; 
+	z-index:20;
+	border:2px solid #9CBB66;
+	box-shadow:1px 1px 12px -2px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:1px 1px 12px -2px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow:1px 1px 12px -2px rgba(0, 0, 0, 0.25);
+}
+.icons li.addedSubscrip {
+	behavior: url(PIE.htc);
+	box-shadow:inset 1px 1px 7px 0 rgba(0, 0, 0, 0.25),1px 1px 12px -2px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:inset 1px 1px 7px 0 rgba(0, 0, 0, 0.25),1px 1px 12px -2px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow:inset 1px 1px 7px 0 rgba(0, 0, 0, 0.25),1px 1px 12px -2px rgba(0, 0, 0, 0.25);
+	background:#f0f0f0;
+}
+.icons li .notif {
+	background-color:#719E19;
+	color:#fff;
+	font-size:90%;
+	position:absolute;
+	right:-1px;
+	top:-1px;
+	z-index:100;
+	display:none;
+	padding:7px
+}
+.icons li .notifOn {
+	display:inline
+}
+.icons li figure {
+	float:left;
+	overflow:hidden;
+	text-align:center;
+	width:130px;
+	z-index:100;
+	padding:20px;
+	background:url(../images/icon-bg.png) repeat-x left bottom #fdfdfd;
+}
+
+.icons li figure img {max-width:100%; padding:15px 0;}
+
+.icons li figure figcaption {
+	color:#719E19;
+	font-size:90%;
+	height:25px;
+	text-align:center;
+	width:100%;
+	text-decoration:none;
+}
+.icons li a {text-decoration:none;}
+.iconBig {
+	margin:4% auto
+}
+.iconBig li {
+	margin:5%!important
+}
+.iconBig li figure {
+	padding:20px!important;
+	width:140px;
+}
+.iconBig li figure figcaption {
+	font-size:100%;
+	line-height:20px
+}
+.thanksmgs {
+	background:url(../images/thanks-bg.png) no-repeat center top
+}
+.thanksmgs .msg {
+	width:200px;
+	margin:70px auto 0
+}
+.morMar {
+	margin-top:6%
+}
+.loginfel {
+	width:420px
+}
+.loginfel .errorMgs {
+	width:71%
+}
+.popuperrmgs {
+	position:absolute
+}
+.clrBoth {
+	clear:both!important
+}
+.inputHold, .fLeft {
+	float:left
+}
+.aV {vertical-align:bottom;}
+.aVM {vertical-align:middle;}
+.thankicons {margin-top:50px;}
+
+.button {
+	text-indent:-9999px;
+	cursor:pointer;	
+}
+.inputValUp {
+	background:url(../images/bullet_arrow_right.png) no-repeat;
+	width:13px;
+	height:25px;
+	position:relative;
+	top:-3px;	
+	display:inline-block;
+	margin:0 40px 0 0;
+	right:-5px;
+}
+.inputValDown {
+	background:url(../images/bullet_arrow_left.png) no-repeat;
+	width:13px;
+	height:25px;
+	position:relative;
+	left:-5px;
+	display:inline-block;
+	top:-3px;	
+}
+
+/* for 980px or less */
+@media screen and (max-width:980px) {
+#wrapper {
+	width:96%
+}
+section {
+	width:80%
+}
+.iconHold {
+	width:100%
+}
+.icons li figure {
+	width:130px;
+	padding:15%
+}
+
+.addontit figure {
+	width:11%
+}
+.homeScr {
+	width:40%
+}
+
+.prenoTab {
+	margin-left:10%
+}
+}
+
+/* for 800px or less */
+@media screen and (max-width:800px) {
+
+#wrapper {
+	width:94%
+}
+header {
+	width:100%;
+	margin:0 auto;
+}
+h1 {
+    font-size: 240%;
+}
+h2 {
+    font-size: 165%;
+}
+section {
+	width:100%
+}
+.iconHold {
+	width:90%
+}
+.icons li {
+	margin:1.5%
+}
+.icons li figure { 
+	padding: 15%;
+	width:110px;
+}
+
+.iconBig li {
+	margin:4%!important
+}
+.iconBig li figure {
+	padding:15%!important;
+	width:140px;
+}
+
+}
+
+/* for 700px or less */
+@media screen and (max-width:600px) {
+
+#wrapper {
+	width:98%
+}
+header {
+	width:95%;
+	margin:0 auto
+}
+h1 {
+    font-size: 180%;
+}
+h2 {
+    font-size: 120%;
+}
+section {
+	width:95%
+}
+.iconHold {
+	width:100%
+}
+.icons li {
+	margin:1.5%
+}
+.icons li figure { 
+	padding: 15%;
+	width:90px;
+}
+
+.iconBig li {
+	margin:4%!important
+}
+.iconBig li figure {
+	padding:15%!important;
+	width:140px;
+}
+
+.addontit figure {
+	width:12%
+}
+.homeScr {
+	width:40%
+}
+.iconBig li figure {
+	width:110px
+}
+.prenoTab {
+	margin-left:10%
+}
+.loginfel .errorMgs {
+	width:75%
+}
+}
+
+/* for 480px or less */
+@media screen and (max-width:480px) {
+body {font-size:12px;}
+#wrapper {
+	width:92%
+}
+h1 {
+    font-size: 200%;
+}
+h2 {
+    font-size: 140%;
+}
+.icons li {
+	margin:.7%
+}
+.icons li figure { 
+	padding: 15%;
+	width:90px;
+}
+.iconBig li {
+	margin:3%!important
+}
+.iconBig li figure {
+	padding:10%!important;
+	width:130px;
+}
+.addontit h5 {
+	line-height:35px;
+	font-size:130%
+}
+.homeScr {
+	width:220px;
+	margin:0 auto;
+	padding:67px 10px 120px 50px
+}
+
+.iconsbtn {
+	float:left;
+	width:100%;
+	margin:10px auto
+}
+section, .iconHold, .loginfel, .loginfel .errorMgs {
+	width:100%
+}
+
+}
+
+/* for 320px or less */
+@media screen and (max-width:360px) {
+#wrapper {
+	width:92%!important
+}
+body {
+	font-size:12px
+}
+h1 {
+    font-size: 160%;
+}
+h2 {
+    font-size: 115%;
+}
+.icons li figure { 
+	padding: 3%;
+	width:100px;
+}
+.iconBig li {
+	margin:1%!important
+}
+.iconBig li figure {
+	padding:10%!important;
+	width:98px;
+}
+.addontit figure {
+	width:20%
+}
+.addontit h5 {
+	line-height:20px;
+	font-size:110%
+}
+.homeScr {
+	background-size:90%;
+	width:75%;
+	margin:11% auto;
+	padding:25% 5% 35% 20%
+}
+.iconsbtn {
+	float:left;
+	width:100%;
+	margin:10px auto
+}
+section, .iconHold, .loginfel, .loginfel .errorMgs {
+	width:100%
+}
+.tstyle tr td, .tstyle1 tr td {padding: 8px 10px;}
+.tstyle1 tr td label .txt {
+	width:100%;
+}
+.btn1, .btn2 {width:140px !important; margin:10px auto 0; float:none; display:block; overflow:hidden;}
+}

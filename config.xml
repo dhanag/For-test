@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<widget xmlns = "http://www.w3.org/ns/widgets"
+		xmlns:gap = "http://phonegap.com/ns/1.0"
+		id = "it.etisalat.mobileapp"
+		version = "1.0.0"
+		versionCode = "1">
+
+    <name>Etisalat</name>
+
+    <description>
+        Etisalat Mobile Application
+    </description>
+
+    <!--<author href="http://veneronslabs.wordpress.com" email="veneronslaboratories@gmail.com">
+        Daniele Veneroni
+	</author> -->
+     
+	   <!-- PhoneGap API -->
+  <feature id="blackberry.system" required="true" version="1.0.0.0" />
+  <feature id="phonegap" required="true" version="1.0.0" />
+  <feature id="blackberry.find" required="true" version="1.0.0.0" />
+  <feature id="blackberry.identity" required="true" version="1.0.0.0" />
+  <feature id="blackberry.pim.Address" required="true" version="1.0.0.0" />
+  <feature id="blackberry.pim.Contact" required="true" version="1.0.0.0" />
+  <feature id="blackberry.io.file" required="true" version="1.0.0.0" />
+  <feature id="blackberry.utils" required="true" version="1.0.0.0" />
+  <feature id="blackberry.io.dir" required="true" version="1.0.0.0" />
+  <feature id="blackberry.app" required="true" version="1.0.0.0" />
+  <feature id="blackberry.app.event" required="true" version="1.0.0.0" />
+
+  <!-- PhoneGap API -->
+  <access subdomains="true" uri="file:///store/home" />
+  <access subdomains="true" uri="file:///SDCard" />
+
+  <!-- Expose access to all URIs, including the file and http protocols -->
+  <access subdomains="true" uri="*" />   
+        
+    <!-- ICONS -->
+        
+    <icon src="icon.png" /> <!-- default 72 pixels -->
+        
+    <icon src="icons/ios/icon.png" width="57" height="57" /> <!-- iPhone 3G, iPhone 3GS, iPod Touch 2G, 3G -->
+    <icon src="icons/ios/icon72.png" gap:platform="ios" width="72" height="72" /> <!-- iPad, iPad 2, iPad mini -->
+    <icon src="icons/ios/icon114.png" width="114" height="114" /> <!-- iPhone 4, iPhone 4S, iPod Touch 4G -->
+    <icon src="icons/ios/icon144.png" width="144" height="144" /> <!-- iPad 3, iPad 4 -->
+        
+    <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" /> <!-- 36 pixels -->
+    <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" /> <!-- 48 pixels -->
+    <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" /> <!-- 72 pixels -->
+    <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" /> <!-- 96 pixels -->
+        
+    <icon src="icons/bb/icon.png" gap:platform="blackberry" /> <!-- 72 pixels -->
+    <icon src="icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/> <!-- 72 pixels -->
+        
+    <icon src="icons/winphone/icon.png" gap:platform="winphone" /> <!-- 57 pixels -->
+    <icon src="icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" /> <!-- 72 pixels -->
+               
+            
+    <!-- GENERAL PREFERENCES -->
+        
+    <!-- <preference name="phonegap-version" value="2.2.0" /> versione di phonegap usata, se non specificata usa quella di default (l'ultima disponibile) -->
+    <preference name="orientation" value="default" /> <!-- entrambe supportate -->
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" /> <!-- toglie la barra in alto su iOS e Android -->
+        
+    <!-- iOS PREFERENCES -->
+        
+    <preference name="webviewbounce" value="false" /> <!-- effetto bounce quando si raggiunge la cima o il fondo della pagina -->
+    <preference name="prerendered-icon" value="true" /> <!-- non applica effetto gloss all'icona -->
+    <preference name="stay-in-webview" value="false" /> <!-- if set to true, all links (even with target set to blank) will open in the app's webview -->
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="exit-on-suspend" value="true" /> <!-- if set to false, app will continue to run on suspend -->
+    <preference name="show-splash-screen-spinner" value="true" /> <!-- if set to false, the spinner won't appear on the splash screen during app loading -->
+    <preference name="auto-hide-splash-screen" value="true" /> <!-- if set to false, the splash screen must be hidden using a JavaScript API -->
+        
+    <!-- ANDROID PREFERENCES -->
+        
+    <preference name="android-minSdkVersion" value="7" /> <!-- minimo Android 2.1 -->
+    <!-- <preference name="android-maxSdkVersion" value="17" /> massimo Android 4.2 -->
+    <preference name="android-installLocation" value="auto" />
+        
+    <!-- BLACKBERRY PREFERENCES -->
+        
+    <preference name="disable-cursor" value="false" />
+        
+    <!-- PHONEGAP API FEATURES PREFERENCES -->
+        
+    <preference name="permissions" value="none"/>
+
+<icon rim:hover="false" src="icons/bb/icon.png" />
+  <icon rim:hover="true" src="images/icon_hover.png" />
+
+  <rim:loadingScreen backgroundColor="#000000"
+                     foregroundImage="images/thanks-bg.png"
+		     onFirstLaunch="true">
+    <rim:transitionEffect type="fadeOut" />
+  </rim:loadingScreen>
+
+  <content src="index.html" />
+</widget>
