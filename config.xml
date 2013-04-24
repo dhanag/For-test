@@ -66,6 +66,8 @@
         
     <!-- PHONEGAP API FEATURES PREFERENCES -->
         
-    <preference name="permissions" value="none"/>
+    <preference name="permissions" value="none"/>  
+
+
 
 </widget>
